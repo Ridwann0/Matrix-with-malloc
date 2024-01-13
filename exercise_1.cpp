@@ -11,19 +11,18 @@
 
 #include <iostream>
 
+// Check if NUMBER is defined
 #ifndef NUMBER
-
-#error "Number is not defined"
-
+#error "NUMBER is not defined. Compilation terminated."
 #endif
 
-#ifdef(NUMBER != 8) && (NUMBER != 16)
-
+// Check if NUMBER is equal to 8 or 16
+#if (NUMBER != 8) && (NUMBER != 16)
+#error "NUMBER must be either 8 or 16. Compilation terminated."
 #endif
 
 int main()
 {
     std::cout << "The value of NUMBER is: " << NUMBER << std::endl;
-
     return 0;
 }
