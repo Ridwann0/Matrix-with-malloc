@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <cmath>
 
-constexpr int PRIMENMR[] = {0, 1};
+constexpr int PRIMENMR = 1;
 
 static bool isprime(int num) // primenumber function
 {
@@ -16,7 +16,7 @@ static bool isprime(int num) // primenumber function
     else
     {
 
-        if (num > PRIMENMR[1])
+        if (num > PRIMENMR)
         {
             const int max_number = std::ceil(std::sqrt(num));
 
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
     int number = std::stoi(argv[1]);
 
-    std::cout << number << " is " << (isprime(number) ? "" : "not ") << "prime!" << std::endl;
+    std::cout << number << " is " << (isprime(number) ? "" : "not ") << "prime" << std::endl;
 
     return 0;
 }
